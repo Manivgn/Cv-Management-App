@@ -1,0 +1,249 @@
+
+.cv-body{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: fit-content ;
+    width: 21cm ; 
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.header-profile{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 168px;
+    width: 100%;
+}
+
+.header-profile .picture{
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 20%;
+    margin-right: 40px;
+}
+
+.header-profile .picture img {
+        width: 60%;
+        height: 80%;
+        border: 2px solid grey;
+        border-radius: 50%;
+        object-fit: fill;
+}
+
+.header-profile .details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-left: 40px;
+    text-wrap: nowrap;
+}
+
+.details-contact-location{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: grey;
+    gap: 10px;
+    margin-top: 5px;
+}
+#profile-name{
+    font-size: 23px;
+    font-weight: bold;
+}
+#profile-title{
+    color: rgb(13, 131, 144);
+    font-size: 17px;
+    font-weight: bold;
+
+}
+#profile-description{
+    font-size: 12px;
+    color: rgb(76, 74, 74);
+    font-weight: 600;
+}
+.section-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(13, 131, 144);
+}
+.main{
+    display: flex;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    margin-left: 40px;
+    margin-right: 5px;
+}
+.main-content .section-title{
+    display: inline-block;
+    border-bottom: 5px solid rgb(13, 131, 144);
+    border-radius: 2px;
+    width: 90%;
+}
+.main-profile > div{
+    width: 90%;
+}
+.education{
+    display: flex;
+    flex-direction: column;
+}
+.diploma{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px lightgray dashed;
+    width: 85%;
+    padding-bottom: 2px;
+
+}
+.diploma-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    font-size: 13px;
+    text-wrap: pretty;
+    padding-bottom: 4px;
+    height: 80%;
+}
+.diploma-details >span:first-child{
+    font-weight: 500;
+}
+.diploma-year{
+    font-size: 12px;
+    font-style: italic;
+}
+.diploma-details >span:nth-child(2){
+    color: rgb(13, 131, 144);
+}
+.technology-skills{
+    display: flex;
+    flex-direction: column;
+}
+.technology-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    border-bottom: 1px lightgray dashed;
+    padding-bottom: 2px;
+    padding-top: 1px;
+}
+.technology-item:last-child{
+    border-bottom: none;
+}
+.technology-item > div:first-child{
+    font-weight: bolder;
+    color: rgb(13, 131, 144);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.technology-item > div:nth-child(2){
+    text-wrap: stable;
+    font-variant: small-caps;
+    font-size: 13px;
+}
+.experiences-projects{
+    display: flex;
+    flex-direction: column;
+}
+.project{
+   display: grid;
+   grid-template-columns: 30% 70%;
+    font-size: 13px;
+    border-bottom: 1px lightgray dashed;
+}
+.project-year{
+   display: flex;
+   flex-direction: column;
+    color: rgb(13, 131, 144) ;
+    font-style: italic;
+    margin-right: 20px;
+    font-weight: 600;
+}
+.project-details{
+    display: flex; 
+    flex-direction: column;
+    font-size: 14px;
+}
+.project-details >span:first-child{
+    font-variant: small-caps;
+    font-weight: 500;
+    padding-bottom: 7px;
+}
+.project:last-child{
+    border-bottom: none;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    margin-right: 40px;
+    font-size: 16px;
+}
+.sidebar > div{
+    margin-bottom: 10px;
+}
+.sidebar > div > div {
+    border-top: 5px solid rgb(13, 131, 144);
+    border-radius: 1px;
+}
+.soft-skills{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.soft-skills > div {
+    display: flex;
+    flex-direction: column;
+ }
+.skill-item{
+    margin-top: 10px;
+    text-align: center;
+    font-variant: small-caps;
+}
+.languages{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.language-item{
+    margin-top: 15px;
+}
+.languages > div{
+    display: flex;
+    flex-direction: column;
+}
+.interests{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.interests > div {
+    display: flex;
+    flex-direction: column;
+}
+.interest-item{
+    margin-top: 10px;
+    text-align: center;
+    font-variant: small-caps;
+}
+.other-activities{
+    display: flex;
+    flex-direction: column;
+}
+.activity-item{
+    margin-top: 10px;
+    text-align: start;
+    font-variant: small-caps;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/add-cv.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-nav">
+        <div class="main-nav-container">
+            <div class="logo">
+                <div>
+                    <a href="" target="_blank">
+                    <img src="./resources/images/mql.png" class="logo-mql" alt=""/>
+                    </a>
+                </div>
+                <div id="application-title"> Gestion de CV</div>
+            </div>
+        </div>
+    </div>
+    <form id="cv-form">
+        <div class="form-profile">
+            <h2>Profile</h2>
+            <div>
+                <label for="firstName">Firstname</label>
+                <input type="text" id="firstName" />
+            </div>
+            <div>
+                <label for="LastName">Lastname</label>
+                <input type="text" id="LastName" />
+            </div>
+            <div>
+                <label for="birthay">Birthday</label>
+                <input type="date" id="birthay" />
+            </div>
+            <div>
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" id="phonenumber" />
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" />
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input type="text" id="address" />
+            </div>
+            <div>
+                <label for="professionalsummary">Professional Summary</label>
+                <textarea id="professionalsummary" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="link">Link (Social Media, LinkedIn, Portfolio)</label>
+                <input type="url" id="link" />
+            </div>
+        </div>
+        <div class="form-education">
+            <h2>Education</h2>
+            <div>
+                <h3>Diploma</h3>
+                <div>
+                    <label for="diploma">Diploma title</label>
+                    <input type="text" id="diploma" />
+                </div>
+                <div>
+                    <label for="organisation">Organisation</label>
+                    <input type="text" id="organisaton">
+                </div>
+                <div>
+                    <label for="year">Year</label>
+                    <input type="number" min="1900" max="2025" id="year">
+                </div>
+            </div>
+        </div>
+        <div class="form-technologies">
+            <h2>Technology Skills</h2>
+            <div>
+                <label for="detail"></label>
+                <input type="text" id="detail">
+            </div>
+        </div>
+        <div class="form-experiences">
+            <h2>Experiences</h2>
+        </div>
+        <div class="form-languages">
+            <h2>Languages</h2>
+        </div>
+        <div class="form-soft-skills">
+            <h2>Soft skills</h2>
+        </div>
+        <div class="form-interests">
+            <h2>Interests</h2>
+        </div>
+    </form>
+</body>
+</html>

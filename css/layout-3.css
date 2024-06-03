@@ -1,0 +1,238 @@
+
+
+.cv-body{
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: fit-content ;
+    width: 21cm ;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    padding: 10px 10px 10px 10px;
+}
+.header-profile{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 168px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+}
+.header-profile .details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 80%;
+}
+.header-profile .details .details-contact-location{
+    display: flex;
+    flex-direction: column;
+}
+.details-contact-location> span{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#profile-description{
+    font-size: 14px;
+}
+#profile-name{
+    font-size: 18px;
+    padding-top: 15px;
+}
+#profile-title{
+    font-size: 17px;
+    font-weight: lighter;
+    color: rgb(240, 76, 35);
+}
+.picture{
+    width: 17%;
+    height: 80%;
+    padding-right: 15px;
+    
+}
+.picture img{
+    height: 100%;
+    width: 100%;
+}
+.section-title{
+    font-size: 17px;
+    font-style: oblique;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 84%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+.main-content > div > * {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+}
+.main-profile{
+    height: 17%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+    margin-bottom: 10px;
+}
+.education{
+    height: fit-content;
+    width: 100%;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+    margin-bottom: 10px;
+
+}
+.diploma{
+    margin-right: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: lighter;
+    border-top: 1px solid grey;
+}
+.diploma-details :first-child{
+    font-weight: bold;
+    color: rgb(240, 76, 35) ;
+}
+.diploma-details{
+    width: 80%;
+    display: grid ;
+    grid-template-columns: repeat(2, 1fr);
+}
+.diploma-details > span{
+    padding-right:5px;
+}
+.diploma-details >:first-child{
+    grid-column: span 2;
+}
+.diploma-year{
+    font-weight: bold;
+    font-size: 13px;
+    font-style: oblique;
+    text-wrap: nowrap;
+    color: rgb(51, 71, 96);
+}
+.diploma-year > span{
+    width: 80%;
+}
+.technology-skills{
+    height: fit-content;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.technology-skills >:first-child{
+    grid-column: span 3;
+}
+.technology-item >div:first-child{
+    font-weight: bold;
+    color: rgb(240, 76, 35);
+}
+.experiences-projects{
+    height: fit-content;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+    margin-bottom: 10px;
+
+}
+.project{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid grey;
+}
+.project-year{
+    font-weight: 500;
+    text-wrap: nowrap;
+    
+    font-style: oblique;
+    color: rgb(51, 71, 96);
+}
+.project-year >span {
+    padding-right: 5px;
+}
+.project-details{
+    margin-right: 10px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.project-details :first-child{
+    font-weight: bold;
+    color: rgb(240, 76, 35) ;
+}
+
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid rgb(240, 76, 35) ;
+    border-top: 15px solid rgb(240, 76, 35);
+}
+.sidebar> div {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33%;
+    border-right: 1px solid rgb(240, 76, 35);
+}
+.sidebar > div:last-child{
+    border-right: none;
+}
+.languages{
+    display: flex;
+    flex-direction: column;
+}
+.languages > div{
+    display: flex;
+    flex-direction: column;
+}
+.soft-skills{
+    display: flex;
+    flex-direction: column;
+}
+.soft-skills > div{
+    display: flex;
+    flex-direction: column;
+}
+.interests{
+    display: flex;
+    flex-direction: column;
+}
+.interests > div{
+    display: flex;
+    flex-direction: column;
+}
+.other-activities{
+    display: none;
+}

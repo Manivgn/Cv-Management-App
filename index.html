@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae </title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://kit.fontawesome.com/01127a96b5.js" crossorigin="anonymous"></script>
+    <script src="./data/database.js"></script>
+    <script src="./services/utils.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="main-nav">
+        <div class="main-nav-container">
+            <div class="logo">
+                <div>
+                    <a href="" target="_blank">
+                    <img src="./resources/images/mql.png" class="logo-mql" alt=""/>
+                    </a>
+                </div>
+                <div id="application-title"> Gestion de CV</div>
+            </div>
+            <div class="nav-container">
+                <div id="search-placeholder">Rechercher un profil : </div>
+                <div class="search-form">
+                    <input class="keyword" type="text" id="name" placeholder="Par Nom" autocomplete="off" onkeyup="filterByName()" />
+                    <input class="keyword" type="text" id="technology" placeholder="Par technologie" autocomplete="off" onkeyup="filterByTechnology()" />
+                    <input class="keyword" type="text" id="diploma" placeholder="Par Diplome" autocomplete="off" onkeyup="filterByDiploma()" />
+                    <input class="keyword" type="text" id="address" placeholder="Par Ville de résidence" autocomplete="off" onkeyup="filterByAddress()" />
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div id="cvRepository">
+    </div>
+
+    <div class="footer">
+        <div class="separator">
+            <div class="hr">
+            <hr></div>
+            <button class="button-top">
+                <a href="#top" id="goUp" onclick="scrollUp()">TOP</a>
+            </button>
+            <div class="hr"><hr></div>
+        </div>
+        <div class="bottom-footer">
+            <div class="bottom-nav">
+                <div class="copyright">
+                    <p>Copyright &copy Master Qualité du Logiciel.
+                </p>
+                </div>
+                <div class="social">
+                    <button class="sitem">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href="https://www.linkedin.com/company/master-qualite-du-logiciel/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href="https://www.fsdm.usmba.ac.ma/Docs/Candidature/23-24/Master/MQL.pdf" target="_blank"><i class="fa fa-google"></i></a>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

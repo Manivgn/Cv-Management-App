@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.style-options{
+    margin-left: 30px;
+    margin-right: 90px;
+}
+.style-options label{
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+#style-options{
+    width: 130px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#style-options option:hover{
+    background: rgb(240, 76, 35);
+    color: white;
+}
+
+.btn{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(240, 76, 35);
+    border-radius: 5px;
+    border: 1px solid rgb(240, 76, 35);
+    margin-left: 15px;
+    margin-left: 15px;
+    color: white;
+    font-size: 18px;
+    padding: 2px 15px 2px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
+.cv-body{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+body{
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1,5;
+
+}
+#application-title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    color:#007fa4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: oblique;
+    margin-left: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.logo-mql{
+    padding-top: 20px;
+    max-height: 70%;
+    max-width: 245px;
+    
+}
+
+.top-nav{
+    background: #F7A94A;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav .top-nav-container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-left:auto ;
+    padding-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.main-nav{
+    background: white;
+
+}
+
+.nav-container{
+    background: #007fa4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 0%;
+    padding-right: 0%;
+    height: 60px;    
+    
+}
+.nav-container ul{
+    display: flex;
+    align-items: center;
+
+}
+.nav-container ul li{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.nav-container i{
+    margin-right: 7px;
+    
+
+}
+.nav-container .item:nth-of-type(4) i{
+    font-style: italic;
+}
+
+
+.nav-container .item{
+    padding:20px 30px;
+    font-size: 14px;
+    font-family: 'Roboto',sans-serif;
+    width: max-content;
+
+}
+
+
+
+
+
+.footer{
+    background: #007fa4;
+}
+.top-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+
+.bottom-footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    
+}
+.bottom-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.copyright p{
+    color: azure;
+    opacity: 0.9;
+    font-size: 13px;
+}
+.social{
+    display: flex;    
+}
+.sitem{
+    margin-right: 15px;
+    
+
+}
+.sitem i{
+    color: white;
+    padding-left: 5px; 
+    padding-right: 5px;
+    
+
+}
+
+.social button{
+    background: #007fa4;
+    border: 2px solid rgb(78, 136, 163);
+    padding: 10px 7px;
+    border-radius: 2px;
+
+}
+.social button:hover{
+    background-color: #fff;
+
+}
+.social .sitem:hover i{
+    color: black;
+
+}
+.button-top:hover{
+    background-color: #fff;
+
+}   
+.button-top:hover a{
+    color: black;
+}
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+.separator a{
+    text-decoration: none;
+    color: #fff;
+}
+.separator button{
+    background: #007fa4;
+    border: 1px solid #fff;
+    padding: 9px 20px;
+}
+
+.hr{
+    width: 36%;
+    opacity: 0.5;
+    
+}

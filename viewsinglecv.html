@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/viewsinglecv.css"/>
+    <link id="cvstyling" rel="stylesheet" href="./css/layout-1.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://kit.fontawesome.com/01127a96b5.js" crossorigin="anonymous"></script>
+    <script src="./data/database.js"></script>
+    <script src="./services/buildHeader.js"></script>
+    <script src="./services/buildMainContent.js"></script>
+    <script src="./services/buildSidebar.js"></script>
+    <script src="./services/cvMapper.js"></script>
+    <script src="./services/pagination.js"></script>
+    <script>
+        const id = getID('cvID');
+        window.onload = function () {
+            if (id) {
+                init(id);
+            }
+            else{
+            init(1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main-nav">
+        <div class="main-nav-container">
+            <div class="logo">
+                <div>
+                    <a href="" target="_blank">
+                    <img src="./resources/images/mql.png" class="logo-mql" alt=""/>
+                    </a>
+                </div>
+                <div id="application-title"> Gestion de CV</div>
+            </div>
+            <div class="nav-container">
+                    <div class="style-options">
+                        <label for="style-options">sélectionner un modèle</label>
+                            <select id="style-options" name="style-options" onchange="changeStyling()" >
+                                <option value="layout1">Style 1</option>
+                                <option value="layout2">Style 2</option>
+                                <option value="layout3">Style 3</option>
+                                <option value="layout4">Style 4</option>
+                                <option value="layout5">Style 5</option>
+                            </select>
+                    </div>
+                    <div class="buttons">
+                        <input type="button" class="btn" id="first" value="FIRST" onclick="goToFirst()"></input>
+                        <input type="button" class="btn" id="previous" value="Previous" onclick="goToPrevious()"></input>
+                        <input type="button" class="btn" id="next" value="Next" onclick="goToNext()"></input>
+                        <input type="button" class="btn" id="last" value="LAST" onclick="goToLast()"></input>
+                        <!--<input type="button" class="btn" id="download" value="download" onclick="downloadCV()"></input> -->
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cv-body" >
+        <div class="header-profile">
+        </div>
+        <div class="main">
+            <div class="main-content">
+            </div>
+            <div class="sidebar">
+            </div>
+        </div>
+    </div> 
+
+    <div class="footer">
+        <div class="separator">
+            <div class="hr">
+            <hr></div>
+            <button class="button-top">
+                <a href="#top" id="goUp" onclick="scrollUp()">TOP</a>
+            </button>
+            <div class="hr"><hr></div>
+        </div>
+        <div class="bottom-footer">
+            <div class="bottom-nav">
+                <div class="copyright">
+                    <p>Copyright &copy Master Qualité du Logiciel.
+                </p>
+                </div>
+                <div class="social">
+                    <button class="sitem">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href="https://www.linkedin.com/company/master-qualite-du-logiciel/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </button>
+                    <button class="sitem">
+                        <a href="https://www.fsdm.usmba.ac.ma/Docs/Candidature/23-24/Master/MQL.pdf" target="_blank"><i class="fa fa-google"></i></a>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

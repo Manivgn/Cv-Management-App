@@ -1,0 +1,205 @@
+.cv-body{
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content ;
+    width: 21cm ; 
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header-profile{
+    background-color: #1a1d2a;
+    color: whitesmoke;
+    display: flex;
+    height: 134.7px;
+}
+.header-profile .picture{
+    width: 17%;
+    height: 100%;
+}
+.header-profile .picture img{
+   width: 100%;
+   height: 100%;
+}
+
+.header-profile .details{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    height: 100%;
+    padding-bottom: 5px;
+}
+.main-profile{
+    height: fit-content;
+}
+#profile-name{
+    font-size: x-large;
+}
+#profile-title{
+    font-size: large;
+}
+#profile-description{
+    font-size: 14px;
+}
+.header-profile .details span{
+    margin-top: 5px;
+}
+.header-profile .details .details-contact-location {
+    font-size: small;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    font-weight: 500;
+}
+.header-profile .details .details-contact-location span {
+    text-wrap: nowrap;
+    opacity: 0.5;
+}
+.main{
+    display: flex;
+    height: 85%;
+    padding: 15px 15px 15px 15px;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+.main-content > * {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+    margin-top: 7px;
+    border-bottom: 2px solid rgb(213, 198, 198);
+}
+
+.main-content >:last-child{
+    border-bottom: none;
+}
+
+.education{
+    height: fit-content;
+}
+.diploma{
+    display: flex;
+    justify-content: space-between;
+}
+.diploma-details{
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+.diploma-details :first-child{
+    font-weight: bold;
+}
+.diploma-year{
+    margin-right: 10px;
+    text-wrap: nowrap;
+    text-align: end;
+    font-style: italic;
+}
+.technology-skills{
+    height: fit-content;
+    font-size: 15px;
+}
+.technology-item >div:first-child{
+    font-weight: bold;
+}
+
+.technology-item >div:not(:first-child){
+    font-style: oblique;
+    font-size: 13px;
+    text-wrap: wrap;
+}
+.experiences-projects{
+    height: fit-content;
+    font-size: 14px;
+}
+.project{
+    display: grid;
+    grid-template-columns: 17% 83%;
+    padding-top: 3px;
+}
+.project-year{
+    height: 80%;
+    font-size: 13px;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(213, 198, 198);
+}
+.project-year > :first-child{
+    font-weight:bold;
+}
+.project-details{
+    display: flex;
+    flex-direction: column;
+}
+.project-details :first-child{
+    font-weight: bold;
+}
+.section-title{
+    font-weight: bolder;
+    font-size: 18px;
+    text-wrap: nowrap;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid rgb(213, 198, 198);
+}
+.sidebar >*{
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 15px;
+    height: max-content;
+    border-bottom: 2px solid rgb(213, 198, 198);
+    
+}
+.languages span{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.languages >:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+.soft-skills span{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.soft-skills{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.soft-skills >:nth-child(2){
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.interests span{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.interests{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.interests >:nth-child(2){
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.other-activities{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    font-size: 13px;
+}
+.activity-item{
+    margin-top: 10px;
+    text-align: start;
+    font-variant: small-caps;
+}

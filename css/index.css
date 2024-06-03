@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1,5;
+
+}
+#application-title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    color:#007fa4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-style: oblique;
+    margin-left: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+.logo-mql{
+    padding-top: 20px;
+    max-height: 70%;
+    max-width: 245px;
+    
+}
+
+.top-nav{
+    background: #F7A94A;
+    display: flex;
+    justify-content: center;
+}
+
+.top-nav .top-nav-container{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding-left:auto ;
+    padding-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+
+.nav-container{
+    background: #007fa4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+    padding-left: 0%;
+    padding-right: 0%;
+    height: 60px;
+    
+    
+    
+}
+.nav-container ul{
+    display: flex;
+    align-items: center;
+
+}
+.nav-container ul li{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.nav-container i{
+    margin-right: 7px;
+    
+
+}
+.nav-container .item:nth-of-type(4) i{
+    font-style: italic;
+}
+
+
+.nav-container .item{
+    padding:20px 30px;
+    font-size: 14px;
+    font-family: 'Roboto',sans-serif;
+    width: max-content;
+
+}
+
+#search-placeholder{
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 10px;
+}
+
+
+input.keyword{
+    font-size: 0.8rem;
+    padding-inline: 0.4em;
+    padding-block: 0.6em;
+    margin-right: 5px;
+    border-radius: 30px;
+    transition: border-radius 0.5s ease;
+    border-color: transparent;
+}
+input.keyword:focus{
+    outline: none;
+}
+
+
+input.keyword:hover{
+    border-radius: 1px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#cvRepository{
+    min-height: 100vh;
+}
+
+.user-profile{
+    width: 80px;
+    height: 90px;
+    border-radius: 15px;
+    border: 1px solid #007fa4;
+}
+
+.data-grid{
+	min-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	border-collapse: collapse; 
+	font-family: 'Segoe UI';
+}
+
+.data-grid th {
+	border-bottom: 3px solid #007fa4 ;
+    font-size: 18px;
+}
+
+.data-grid td {
+	border-bottom: 1px solid #007fa4;
+    text-align: center;
+    text-wrap: nowrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.opencv{
+    padding: 5px 15px 5px 15px;
+    color: #007fa4;
+    font-weight: bold;
+    font-size: 17px;
+
+}
+.opencv:hover{
+    cursor: pointer;
+    border-radius: 7px;
+    background: #007fa4;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.footer{
+    background: #007fa4;
+}
+.top-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+
+.bottom-footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    
+}
+.bottom-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.copyright p{
+    color: azure;
+    opacity: 0.9;
+    font-size: 13px;
+}
+.social{
+    display: flex;    
+}
+.sitem{
+    margin-right: 15px;
+    
+
+}
+.sitem i{
+    color: white;
+    padding-left: 5px; 
+    padding-right: 5px;
+    
+
+}
+
+.social button{
+    background: #007fa4;
+    border: 2px solid rgb(78, 136, 163);
+    padding: 10px 7px;
+    border-radius: 2px;
+
+}
+.social button:hover{
+    background-color: #fff;
+
+}
+.social .sitem:hover i{
+    color: black;
+
+}
+.button-top:hover{
+    background-color: #fff;
+
+}   
+.button-top:hover a{
+    color: black;
+}
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+.separator a{
+    text-decoration: none;
+    color: #fff;
+}
+.separator button{
+    background: #007fa4;
+    border: 1px solid #fff;
+    padding: 9px 20px;
+}
+
+.hr{
+    width: 36%;
+    opacity: 0.5;
+    
+}
