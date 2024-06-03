@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/add-cv.css">
     <title>Document</title>
+    <script src="/services/utils.js"></script>
 </head>
-<body>
+<body onload="desactivateAutoComplete()">
     <div class="main-nav">
         <div class="main-nav-container">
             <div class="logo">
@@ -22,6 +23,10 @@
     <form id="cv-form">
         <div class="form-profile">
             <h2>Profile</h2>
+            <div>
+                <label for="profilepicture">Veuillez choisir une photo</label>
+                <input type="file">
+            </div>
             <div>
                 <label for="firstName">Firstname</label>
                 <input type="text" id="firstName" />
@@ -52,15 +57,15 @@
             </div>
             <div>
                 <label for="link">Link (Social Media, LinkedIn, Portfolio)</label>
-                <input type="url" id="link" />
+                <input type="url" id="link" placeholder="séparé par des virgules (',') "/>
             </div>
         </div>
         <div class="form-education">
-            <h2>Education</h2>
-            <div>
-                <h3>Diploma</h3>
+            <h2>Formation</h2>
+            <div class="education-content">
+                <h3>Diplome</h3>
                 <div>
-                    <label for="diploma">Diploma title</label>
+                    <label for="diploma">Titre</label>
                     <input type="text" id="diploma" />
                 </div>
                 <div>
@@ -68,29 +73,125 @@
                     <input type="text" id="organisaton">
                 </div>
                 <div>
-                    <label for="year">Year</label>
-                    <input type="number" min="1900" max="2025" id="year">
+                    <label for="diplomayear">Année</label>
+                    <input type="number" min="1900" max="2025" id="diplomayear">
                 </div>
             </div>
+            <span class="add-new-field" onclick="duplicateEducationElement()">Ajouter une nouvelle section</span>
         </div>
         <div class="form-technologies">
-            <h2>Technology Skills</h2>
-            <div>
-                <label for="detail"></label>
-                <input type="text" id="detail">
+            <h2>Compétences technologiques</h2>
+            <div class="technology-content">
+                <h3>Technologie</h3>
+                <div>
+                    <div>
+                        <label for="technology">Technologie</label>
+                    <input type="text" id="technology" placeholder="Jakarta Entreprise Edition">
+                    </div>
+                     =====>
+                    <div>
+                        <label for="detail">Détail</label>
+                    <input type="text" class="detail" placeholder="Architecture 3 tiers">
+                    <input type="text" class="detail" placeholder="Modèle MVC2">
+                    <input type="text" class="detail" placeholder="Servlets et JSP">
+                    <input type="text" class="detail" placeholder="modèle DAO">
+                    <input type="text" class="detail" placeholder="Spring/SpringBoot">
+                    <input type="text" class="detail" placeholder="Apache TOMCAT">
+                    </div>
+                </div>                
             </div>
+            <span class="add-new-field"  onclick="duplicateTechnologyElement()">Ajouter une nouvelle section</span>
         </div>
         <div class="form-experiences">
-            <h2>Experiences</h2>
+            <h2>Expériences</h2>
+            <div class="experience-content">
+                <h3>Expérience</h3>
+                <div>
+                    <div>
+                        <label for="xptype">Type</label>
+                        <select name="xptype" id="xptype">
+                            <option value="Stage">Stage</option>
+                            <option value="Projet">Projet</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="organisation">Organisation</label>
+                        <input type="text" id="organisation">
+                    </div>
+                    <div>
+                        <label for="title">Titre</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div>
+                        <label for="xpyear">Année</label>
+                        <input type="number" id="xpyear" min="1900" max="2024" >
+                    </div>
+                    <div>
+                        <label for="duration">Durée</label>
+                        <input type="text" id="duration">
+                    </div>
+                </div>
+                <div class="technology-details">
+                    <input type="text" id="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail2" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail3" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail4" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail5" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail6" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" id="detail7" placeholder="Veuillez saisir une technologie utilisée">
+                </div>
+               
+            </div>
+            <span class="add-new-field" onclick="duplicateExperienceElement()">Ajouter une nouvelle section</span>
         </div>
         <div class="form-languages">
-            <h2>Languages</h2>
+            <h2>Langues</h2>
+            <div class="language-content">
+                <h3>Langue</h3>
+                <div>
+                    <label for="language">Langue</label>
+                    <input type="text" id="language" />
+                </div>
+                <div>
+                    <label for="level">Niveau</label>
+                    <select name="level" id="level">
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="B1">B1</option>
+                        <option value="B2">B2</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="certification">Certification</label>
+                    <input type="text" id="certification">
+                </div>
+            </div>
+            <span class="add-new-field" onclick="duplicateLanguageElement()">Ajouter une nouvelle section</span>
         </div>
         <div class="form-soft-skills">
             <h2>Soft skills</h2>
+            <div>
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+
+            </div>
         </div>
         <div class="form-interests">
-            <h2>Interests</h2>
+            <h2>Centres d'intérêt</h2>
+            <div>
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+                <input type="text" class="interestitem">
+            </div>
+        </div>
+        <div class="form-btn">
+            <button type="reset">Effacer tous les champs</button>
+            <button type="submit">Enregistrer CV</button>
         </div>
     </form>
 </body>
