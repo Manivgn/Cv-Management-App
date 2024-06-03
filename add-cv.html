@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/add-cv.css">
     <title>Document</title>
+    <script src="/data/database.js"></script>
+    <script src="/services/utils.js"></script>
+    <script src="/services/saveCV.js"></script>
     <script src="/services/utils.js"></script>
 </head>
-<body onload="desactivateAutoComplete()">
+<body onload="saveCV()">
     <div class="main-nav">
         <div class="main-nav-container">
             <div class="logo">
@@ -25,7 +28,7 @@
             <h2>Profile</h2>
             <div>
                 <label for="profilepicture">Veuillez choisir une photo</label>
-                <input type="file">
+                <input type="file" id="profilepicture">
             </div>
             <div>
                 <label for="firstName">Firstname</label>
@@ -33,11 +36,11 @@
             </div>
             <div>
                 <label for="LastName">Lastname</label>
-                <input type="text" id="LastName" />
+                <input type="text" id="lastName" />
             </div>
             <div>
-                <label for="birthay">Birthday</label>
-                <input type="date" id="birthay" />
+                <label for="birthday">Birthday</label>
+                <input type="date" id="birthday" />
             </div>
             <div>
                 <label for="phonenumber">Phone Number</label>
@@ -57,7 +60,7 @@
             </div>
             <div>
                 <label for="link">Link (Social Media, LinkedIn, Portfolio)</label>
-                <input type="url" id="link" placeholder="séparé par des virgules (',') "/>
+                <input type="text" id="link" placeholder="séparé par des virgules (',') "/>
             </div>
         </div>
         <div class="form-education">
@@ -70,11 +73,11 @@
                 </div>
                 <div>
                     <label for="organisation">Organisation</label>
-                    <input type="text" id="organisaton">
+                    <input type="text" id="organisation" />
                 </div>
                 <div>
                     <label for="diplomayear">Année</label>
-                    <input type="number" min="1900" max="2025" id="diplomayear">
+                    <input type="number" min="1900" max="2025" id="diplomayear" />
                 </div>
             </div>
             <span class="add-new-field" onclick="duplicateEducationElement()">Ajouter une nouvelle section</span>
@@ -115,8 +118,8 @@
                         </select>
                     </div>
                     <div>
-                        <label for="organisation">Organisation</label>
-                        <input type="text" id="organisation">
+                        <label for="xporganisation">Organisation</label>
+                        <input type="text" id="xporganisation">
                     </div>
                     <div>
                         <label for="title">Titre</label>
@@ -132,13 +135,13 @@
                     </div>
                 </div>
                 <div class="technology-details">
-                    <input type="text" id="detail1" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail2" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail3" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail4" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail5" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail6" placeholder="Veuillez saisir une technologie utilisée">
-                    <input type="text" id="detail7" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
+                    <input type="text" class="detail1" placeholder="Veuillez saisir une technologie utilisée">
                 </div>
                
             </div>
@@ -173,11 +176,10 @@
         <div class="form-soft-skills">
             <h2>Soft skills</h2>
             <div>
-                <input type="text" class="interestitem">
-                <input type="text" class="interestitem">
-                <input type="text" class="interestitem">
-                <input type="text" class="interestitem">
-
+                <input type="text" class="skillitem">
+                <input type="text" class="skillitem">
+                <input type="text" class="skillitem">
+                <input type="text" class="skillitem">
             </div>
         </div>
         <div class="form-interests">
@@ -191,7 +193,7 @@
         </div>
         <div class="form-btn">
             <button type="reset">Effacer tous les champs</button>
-            <button type="submit">Enregistrer CV</button>
+            <button type="submit" id="submit" >Enregistrer CV</button>
         </div>
     </form>
 </body>

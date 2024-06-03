@@ -89,7 +89,7 @@ function desactivateAutoComplete() {
 }
 
 function duplicateEducationElement() {
-	console.log('in duplication...');
+	console.log('in add education...');
 	let diploma = document.getElementsByClassName('education-content')[0];
 	let s =`
 	<div class="education-content">
@@ -100,7 +100,7 @@ function duplicateEducationElement() {
                 </div>
                 <div>
                     <label for="organisation">Organisation</label>
-                    <input type="text" id="organisaton">
+                    <input type="text" id="organisation">
                 </div>
                 <div>
                     <label for="diplomayear">Année</label>
@@ -114,11 +114,11 @@ function duplicateEducationElement() {
 	console.log('after duplication...');
 	
 }
-function duplicateExperienceElement() {
+function duplicateTechnologyElement() {
 	console.log('in add experience')
 	let experience = document.getElementsByClassName('technology-content')[0];
 	let s= `
-	<div>
+	<div class="technology-content">
                 <h3>Technologie</h3>
                 <div>
                     <div>
@@ -142,9 +142,9 @@ function duplicateExperienceElement() {
 	tmpdiv.innerHTML += s.trim() ;
 	experience.parentNode.insertBefore(tmpdiv.firstChild, experience.nextSibling);
 }
-function duplicateTechnologyElement() {
+function duplicateExperienceElement() {
 	console.log('in add technology')	
-	let technology = document.getElementsByClassName('technology-content')[0];
+	let technology = document.getElementsByClassName('experience-content')[0];
 	let s =`
 	<div class="experience-content">
                 <h3>Expérience</h3>
@@ -157,8 +157,8 @@ function duplicateTechnologyElement() {
                         </select>
                     </div>
                     <div>
-                        <label for="organisation">Organisation</label>
-                        <input type="text" id="organisation">
+                        <label for="xporganisation">Organisation</label>
+                        <input type="text" id="xporganisation">
                     </div>
                     <div>
                         <label for="title">Titre</label>
@@ -191,7 +191,7 @@ function duplicateTechnologyElement() {
 }
 function duplicateLanguageElement() {
 	console.log('in add language')
-	let language = document.getElementsByClassName('language-content');
+	let language = document.getElementsByClassName('language-content')[0];
 	let s =`
 	<div class="language-content">
                 <h3>Langue</h3>
