@@ -1,7 +1,7 @@
 
 window.onload = function () {
     try {
-        let newCvs = localStorage.getItem("data");
+        let newCvs = localStorage.getItem("database");
         if (newCvs) {
             newCvs = JSON.parse(newCvs);
             database = database.concat(newCvs)
@@ -9,7 +9,6 @@ window.onload = function () {
     } catch (error) {
         console.log(error);
     }
-    
     filterByName();
 }
 
