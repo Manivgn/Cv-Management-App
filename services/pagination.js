@@ -55,7 +55,7 @@ function goToPrevious() {
 }
 
 function goToLast() {
-    let lastindex = database.length+1;
+    let lastindex = database.length ;
     if (index != lastindex) {
         clean();
         index = lastindex ;

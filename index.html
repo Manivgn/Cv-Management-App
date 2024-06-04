@@ -6,9 +6,9 @@
     <title>Curriculum Vitae </title>
     <link rel="stylesheet" href="./css/index.css" />
     <script src="https://kit.fontawesome.com/01127a96b5.js" crossorigin="anonymous"></script>
-    <script src="./data/database.js"></script>
-    <script src="./services/utils.js"></script>
-    <script src="./index.js"></script>
+    <script src="data/database.js"></script>
+    <script src="services/utils.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <div class="main-nav">
@@ -28,6 +28,7 @@
                     <input class="keyword" type="text" id="technology" placeholder="Par technologie" autocomplete="off" onkeyup="filterByTechnology()" />
                     <input class="keyword" type="text" id="diploma" placeholder="Par Diplome" autocomplete="off" onkeyup="filterByDiploma()" />
                     <input class="keyword" type="text" id="address" placeholder="Par Ville de résidence" autocomplete="off" onkeyup="filterByAddress()" />
+                    <input type="button" value="AJOUTER UN NOUVEAU CV" id="add-new-cv" onclick="goTocreateCV()">
                 </div>
             </div>
         </div>

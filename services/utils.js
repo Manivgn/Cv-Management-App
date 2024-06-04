@@ -89,7 +89,6 @@ function desactivateAutoComplete() {
 }
 
 function duplicateEducationElement() {
-	console.log('in add education...');
 	let diploma = document.getElementsByClassName('education-content')[0];
 	let s =`
 	<div class="education-content">
@@ -111,11 +110,9 @@ function duplicateEducationElement() {
 	let tmpdiv = document.createElement('div');
 	tmpdiv.innerHTML += s.trim() ;
 	diploma.parentNode.insertBefore(tmpdiv.firstChild, diploma.nextSibling);
-	console.log('after duplication...');
 	
 }
 function duplicateTechnologyElement() {
-	console.log('in add experience')
 	let experience = document.getElementsByClassName('technology-content')[0];
 	let s= `
 	<div class="technology-content">
@@ -143,7 +140,6 @@ function duplicateTechnologyElement() {
 	experience.parentNode.insertBefore(tmpdiv.firstChild, experience.nextSibling);
 }
 function duplicateExperienceElement() {
-	console.log('in add technology')	
 	let technology = document.getElementsByClassName('experience-content')[0];
 	let s =`
 	<div class="experience-content">
@@ -190,7 +186,6 @@ function duplicateExperienceElement() {
 	technology.parentNode.insertBefore(tmpdiv.firstChild, technology.nextSibling);
 }
 function duplicateLanguageElement() {
-	console.log('in add language')
 	let language = document.getElementsByClassName('language-content')[0];
 	let s =`
 	<div class="language-content">

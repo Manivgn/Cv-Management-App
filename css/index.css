@@ -275,3 +275,16 @@ input.keyword:hover{
     opacity: 0.5;
     
 }
+
+#add-new-cv{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 15px 5px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: none;
+}
+#add-new-cv:hover{
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+}

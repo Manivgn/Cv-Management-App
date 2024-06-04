@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/add-cv.css">
+    <link rel="stylesheet" href="css/add-cv.css">
     <title>Document</title>
-    <script src="/data/database.js"></script>
-    <script src="/services/utils.js"></script>
-    <script src="/services/saveCV.js"></script>
-    <script src="/services/utils.js"></script>
+    <script src="data/database.js"></script>
+    <script src="services/utils.js"></script>
+    <script src="services/saveCV.js"></script>
 </head>
 <body onload="saveCV()">
     <div class="main-nav">
@@ -27,32 +26,32 @@
         <div class="form-profile">
             <h2>Profile</h2>
             <div>
-                <label for="profilepicture">Veuillez choisir une photo</label>
-                <input type="file" id="profilepicture">
+                <label for="profilepicture">Chemin complet vers votre photo</label>
+                <input type="text" id="profilepicture" required>
             </div>
             <div>
                 <label for="firstName">Firstname</label>
-                <input type="text" id="firstName" />
+                <input type="text" id="firstName"  required/>
             </div>
             <div>
                 <label for="LastName">Lastname</label>
-                <input type="text" id="lastName" />
+                <input type="text" id="lastName" required/>
             </div>
             <div>
                 <label for="birthday">Birthday</label>
-                <input type="date" id="birthday" />
+                <input type="date" id="birthday" required />
             </div>
             <div>
                 <label for="phonenumber">Phone Number</label>
-                <input type="tel" id="phonenumber" />
+                <input type="tel" id="phonenumber" required />
             </div>
             <div>
                 <label for="email">Email</label>
-                <input type="email" id="email" />
+                <input type="email" id="email" required/>
             </div>
             <div>
                 <label for="address">Address</label>
-                <input type="text" id="address" />
+                <input type="text" id="address" placeholder="Ville - Pays" required/>
             </div>
             <div>
                 <label for="professionalsummary">Professional Summary</label>
@@ -69,15 +68,15 @@
                 <h3>Diplome</h3>
                 <div>
                     <label for="diploma">Titre</label>
-                    <input type="text" id="diploma" />
+                    <input type="text" id="diploma" placeholder="Master Qualité du Logiciel" required/>
                 </div>
                 <div>
                     <label for="organisation">Organisation</label>
-                    <input type="text" id="organisation" />
+                    <input type="text" id="organisation" placeholder="FSDM - Université - Ville" required/>
                 </div>
                 <div>
                     <label for="diplomayear">Année</label>
-                    <input type="number" min="1900" max="2025" id="diplomayear" />
+                    <input type="number" min="1900" max="2025" id="diplomayear" required/>
                 </div>
             </div>
             <span class="add-new-field" onclick="duplicateEducationElement()">Ajouter une nouvelle section</span>
@@ -89,7 +88,7 @@
                 <div>
                     <div>
                         <label for="technology">Technologie</label>
-                    <input type="text" id="technology" placeholder="Jakarta Entreprise Edition">
+                    <input type="text" id="technology" placeholder="Jakarta Entreprise Edition" required>
                     </div>
                      =====>
                     <div>
@@ -119,19 +118,19 @@
                     </div>
                     <div>
                         <label for="xporganisation">Organisation</label>
-                        <input type="text" id="xporganisation">
+                        <input type="text" id="xporganisation" placeholder="Organisation d'accueil" required>
                     </div>
                     <div>
                         <label for="title">Titre</label>
-                        <input type="text" id="title">
+                        <input type="text" id="title" placeholder="Titre du projet ou stage" required>
                     </div>
                     <div>
                         <label for="xpyear">Année</label>
-                        <input type="number" id="xpyear" min="1900" max="2024" >
+                        <input type="number" id="xpyear" min="1900" max="2024" placeholder="2024" required>
                     </div>
                     <div>
                         <label for="duration">Durée</label>
-                        <input type="text" id="duration">
+                        <input type="text" id="duration" placeholder="Durée" required>
                     </div>
                 </div>
                 <div class="technology-details">
@@ -153,7 +152,7 @@
                 <h3>Langue</h3>
                 <div>
                     <label for="language">Langue</label>
-                    <input type="text" id="language" />
+                    <input type="text" id="language" required/>
                 </div>
                 <div>
                     <label for="level">Niveau</label>
@@ -168,7 +167,7 @@
                 </div>
                 <div>
                     <label for="certification">Certification</label>
-                    <input type="text" id="certification">
+                    <input type="text" id="certification" placeholder="TCF | DALF | TOEIC ...">
                 </div>
             </div>
             <span class="add-new-field" onclick="duplicateLanguageElement()">Ajouter une nouvelle section</span>

@@ -7,13 +7,20 @@ function saveCV() {
             newID = lastID + 1;
 
             let newCV = buildCV(newID);
-
-            database.push(newCV);
-
-            if (database.length == newID) {
-                //getSingleCVPage(newID);
-                window.location.href = 'index.html';
-         }
+            if (newCV) {
+                console.log(newCV);
+                if(localStorage.getItem("database") === null){
+                    localStorage.setItem("database", JSON.stringify([]));
+                }
+                let tmpdatabase = JSON.parse(localStorage.getItem("database"));
+                tmpdatabase.push(newCV);
+                localStorage.setItem("database", JSON.stringify(tmpdatabase));
+                window.location.href='index.html';
+            }
+            else{
+                alert('Your Operation did not complete !');
+            }
+            
         } catch (error) {
             console.log(error);
         }   
@@ -35,12 +42,11 @@ function buildCV(id) {
 }
 
 
-
 function getProfile(CV) {
     try {
     let profile = { } ;
     const profilepicture = document.getElementById('profilepicture').value;
-    //console.log(profilepicture);
+    profile.photo = profilepicture;
 
     const firstName = document.getElementById('firstName').value;
     profile.firstName = firstName;
@@ -49,7 +55,6 @@ function getProfile(CV) {
     profile.lastName = lastName;
 
     const birthday = document.getElementById('birthday').value.split('-');
-    console.log(birthday);
     let birth = {} ;
     birth.year = birthday[0];
     birth.month = birthday[1];
@@ -74,7 +79,6 @@ function getProfile(CV) {
         profilelinks.push(element);
     });
     profile.links = profilelinks;
-    console.log(profile);
 
     CV.profile = profile;
 
@@ -108,7 +112,7 @@ function getEducation(CV) {
    
 }
 
-function getTechnology(CV) {s
+function getTechnology(CV) {
     try {
         let technologies = [];
     const formtechnologies =  document.getElementsByClassName('technology-content');
@@ -188,7 +192,6 @@ function getLanguages(CV) {
         languageitem.experience = "";
         languages.push(languageitem);
     }
-    console.log(languages);
     CV.languages = languages ;
 }
 
